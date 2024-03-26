@@ -2,9 +2,9 @@ import javax.print.attribute.standard.PrinterInfo;
 
 public abstract class Empleado {
     private String nombre;
-    private float salario;
+    private double salario;
 
-    public Empleado(String nombre, float salario) {
+    public Empleado(String nombre, double salario) {
         this.nombre = nombre;
         this.salario = salario;
     }
@@ -17,15 +17,23 @@ public abstract class Empleado {
         this.nombre = nombre;
     }
 
-    public float getSalario() {
+    public double getSalario() {
         return salario;
     }
 
-    public void setSalario(float salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
 
-    public abstract float calcularPago();
+    public abstract double calcularPago();
+
+
+public void mostrarEmpleado()
+    {
+        System.out.println("NOMBRE: " + this.nombre);
+        System.out.println("SALARIO: " + this.salario);
+
+    }
 
 }

@@ -1,10 +1,10 @@
 public class EmpleadoTiempoCompleto extends Empleado {
-    public EmpleadoTiempoCompleto(String nombre, float salario) {
+    public EmpleadoTiempoCompleto(String nombre, double salario) {
         super(nombre, salario);
     }
 
     @Override
-    public float calcularPago() {
+    public double calcularPago() {
         return this.getSalario();
     }
 }
